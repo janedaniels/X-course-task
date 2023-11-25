@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Band Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="section">
+    <div class="header-section-sing-in container">
+        <nav class="user-navigation-sing-in">
+            <p class="name-store main-text">JS Band store / Yevgeniya Sheygus</p>
+        </nav>
+    </div>
+</header>
+ <main>
+    <section class="enter-page section">
+    <div class="container">
+            <form class="user-enter sing-in-page">
+        <span class="user-svg-circle"><svg width="60px" height="60px" class="sing-in-svg"><use href="./images/sprite.svg#icon-person-black-18dp-1"></use></svg></span>
+        <!-- <img src="/images/avatar.png" width="128px" height="128px"> -->
+        <div class="sing-in-form">
+            <p class="label">user name</p>
+            <input type="text" 
+            class="form-name"
+            required 
+            pattern="^[a-zA-Zа-яА-Я]+$" 
+            minlength="2"
+            placeholder="enter your name here">
+        </div>
+        <button type="button" class="btn-sing-in-out">Sing in</button>
+    </form>
+    </div>
+    </section>
+ </main>  
+ <footer>
+    <div class="autor-blok container">
+    <p class="autor-text main-text">Made with <a class="own-link link titel-text" href="https://prometheus.org.ua/" target="_blank" rel="noreferrer noopener">Prometeus 2023</a></p>
+    </div>
+ </footer>
+</body>
+</html>

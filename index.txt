@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Band Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Raleway:wght@800&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="section">
+    <div class="header-section-sing-in container">
+    <nav class="user-navigation">
+        <p class="name-store">JS Band store / Yevgeniya Sheygus</p>
+        <ul class="nav-list">
+        <li class="list">
+            <a href="#" class="link">
+                <span class=""><svg width="35px" height="35px" class="">
+                        <use href="./images/sprite.svg#icon-shopping-cart"></use></svg>
+        </li>
+        <li class="list">
+            <button type="button" class="btn-sing-in-out">Sing out</button>
+        </li>
+        <li class="list user-blok-menu">
+            <a class="user-blok link" href="./signin.html">
+                <svg width="40px" height="40px" class="">
+                        <use href="./images/sprite.svg#icon-person-black-18dp-1"></use>
+                    </svg>
+                <span class="user-blok-text">User name</span></a>
+        </li>
+        </ul>
+    </nav>
+    </div>
+</header>
+<main>
+    <section class="book-page">
+        <div class="book-desc-while container">
+            <div class="part book-img-blok"><img src="./books/angular_up_and_running.jpg" class="book-img"></div>
+                <div class="book-direction part">
+                    <h2 class="head-text">Book name</h2>
+                    <ul class="book-properties-list list">
+                    <li class="book-property main-text">Book author</li>
+                    <li class="book-property main-text">Book level</li>
+                    <li class="book-property main-text">Book tags</li>
+                    </ul>
+                </div>
+        <div class="part">
+            <ul class="book-option-list list">
+            <li class="book-option">
+                <span class="book-option-name main-text">Price, $</span>
+                <span class="book-option-value main-text">17</span>
+            </li>
+            <li class="book-option">
+                <span class="book-option-name main-text">Count</span>
+                <div class="counter-blok">
+                    <svg class="counter-svg" width="22px" height="22px"><use href="./images/sprite.svg#icon-minus"></use></svg>
+                    <label for="counter">
+                        <input type="number" id="counter" class="counter-input">
+                    </label>
+                    <svg class="counter-svg" width="22px" height="22px"><use href="./images/sprite.svg#icon-plus"></use></svg>
+                </div>
+            </li>
+            <li class="book-option">
+                <span class="book-option-name main-text">Total price</span>
+                <span class="book-option-name main-text">51</span>
+            </li>
+        </ul>
+        <div class="bnt-part">
+            <button type="button" class="option-btn-add">Add to card</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+        <h2 class="head-text">Book description</h2>
+        <p class="main-text">This book will demystify Angular as a framework, as well as provide clear instructions and examples on how to get
+        started with writing scalable Angular applications. Angular: Up & Running covers most of the major pieces of Angular,
+        but in a structured manner that is generally used in hands-on training. Each chapter takes one concept, and use examples
+        to cover how it works. Problems to work on (with solutions) at the end of each chapter reinforce the learnings of each
+        chapter and allow readers to really get hands-on with Angular.</p>
+        </div>
+    </section>
+    </main>
+    <footer class="footer-section section">
+        <div class="container" id="footer">
+            <h2 class="name-store call-footer">program your feture with <span class="footer-call-rest">JS Band store</span></h2>
+                <div class="footer-contact">
+                    <div class="footer-part footer-contact-part">
+                    <div class="contact-block">
+                        <h2 class="head-text">Contact us</h2>
+                        <ul class="footer-contact-list">
+                            <li class="contact-list-item list link">
+                                <svg width="18px" height="18px" class="contact-icon"><use href="./images/sprite.svg#icon-phone"></use></svg>
+                                <a href="tel:+380660966223" class="list link footer-contact-item main-text">+380 (66) 096-62-23</a>
+                            </li>
+                            <li class="contact-list-item list link">
+                                <svg width="20px" height="20px" class="contact-icon"><use href="./images/sprite.svg#icon-email-black"></use></svg>
+                                <a href="mailto:jsband_store@gmail.com" class="list link footer-contact-item main-text">jsband_store@gmail.com</a>
+                            </li>
+                            <li class="contact-list-item contact-map">
+                                <svg width="18px" height="18px" class="contact-icon">
+                                    <use href="./images/sprite.svg#icon-map-pin"></use>
+                                </svg><a class="geo-link link main-text" href="#">st. Vasilkivska, 7A <span>Kyiv, 08132</span></a></li>
+                        </ul>
+                    </div>
+                <div class="follow-soc">
+                    <h2 class="head-text">Follow us</h2>
+                    <div class="contact-block footer-soc">
+                        <a class="soc-icon-link link" target="_blank" href="https://www.instagram.com/" rel="noopener noreferrer">
+                        <svg class="soc-icon" width="18px" height="18px"><use href="./images/sprite.svg#icon-instagram"></use></svg></a>
+                        <a class="soc-icon-link link" target="_blank" href="https://twitter.com/" rel="noopener noreferrer">
+                        <svg class="soc-icon" width="18px" height="18px"><use href="./images/sprite.svg#icon-twitter"></use></svg></a>
+                        <a class="soc-icon-link link" target="_blank" href="https://facebook.com/" rel="noopener noreferrer">
+                        <svg class="soc-icon" width="18px" height="18px"><use href="./images/sprite.svg#icon-facebook"></use></svg></a>
+                        <a class="soc-icon-link link" target="_blank" href="https://linkedin.com/" rel="noopener noreferrer">
+                        <svg class="soc-icon" width="18px" height="18px"><use href="./images/sprite.svg#icon-linkedin"></use></svg></a>
+                    </div>
+                </div>
+                </div>
+                <div class="footer-form footer-part">
+                    <h2 class="head-text">Subscribe to our news</h2>
+                        <form class="modal-form">
+                        <label for="" class="modal-form-field">
+                            <span class="modal-form-input-desc">Name</span>
+                            <div class="modal-form-input-wrapper">
+                                <input type="text" name="user_name" required pattern="^[a-zA-Zа-яА-Я]+$" minlength="2"
+                                    class="modal-form-input">
+                                <svg class="modal-form-input-icon" width="16" height="16">
+                                    <use href="./images/sprite.svg#icon-person-black-18dp-1"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <label for="" class="modal-form-field">
+                            <span class="modal-form-input-desc">Phone</span>
+                            <div class="modal-form-input-wrapper">
+                                <input type="tel" name="user-phone-number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                                    title="XXX-XX-XX-XX" class="modal-form-input">
+                                <svg class="modal-form-input-icon" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-phone-black"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <label for="" class="modal-form-field">
+                            <span class="modal-form-input-desc">E-mail</span>
+                            <div class="modal-form-input-wrapper">
+                                <input type="email" name="user-email" required title="user@aaa.com" class="modal-form-input">
+                                <svg class="modal-form-input-icon" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-email-black"></use>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="bnt-part">
+                        <button type="submit" class="modal-form-submit">Subscribe</button>
+                        </div>
+                        </form>
+                        </div>
+                </div>
+            </div>
+        <div class="autor-blok-main-page container">
+            <p class="autor-text main-text">Made with <a class="own-link link main-text" href="https://prometheus.org.ua/"
+                    target="_blank" rel="noreferrer noopener">Prometeus 2023</a></p>
+        </div>
+    </footer>
+</body>
+</html>
