@@ -48,6 +48,7 @@ margin-right: auto;
     padding-top: 20px}
 /* =====================================HEADER======================================= */
 .header-section-sing-in {
+    padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid orangered;
     display: flex;
@@ -554,6 +555,7 @@ font-family: 'Open Sans', sans-serif;
 .mobile-menu {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-color: white;
@@ -575,10 +577,7 @@ font-family: 'Open Sans', sans-serif;
 .mobile-menu-container {
     width: 100%;
     height: 100%;
-    padding-left: 40px;
-    padding-right: 35px;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    padding: 90px 30px 60px 30px;
     display: flex;
     flex-direction: column;
 }
@@ -587,13 +586,13 @@ font-family: 'Open Sans', sans-serif;
     position: absolute;
     top: 32px;
     right: 32px;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(231, 233, 252, 1);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    border: 1px solid orangered;
     padding: 0;
     border-radius: 50%;
     outline: none;
@@ -601,74 +600,63 @@ font-family: 'Open Sans', sans-serif;
 }
 
 .header-list-mobile-menu {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     margin-bottom: auto;
 }
 
 .header-link-menu {
-    font-family: 'Roboto';
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
+    font-weight: 500;
+    font-size: 32px;
     line-height: 40px;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--brand-color);
     transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-link-menu-studio {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 40px;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--color-hoover);
-    transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .header-adress-menu {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin-bottom: 48px;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .header-contact-menu-mail {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    color: var(--color-text);
+    font-family: 'Open Sans', sans-serif;
+    color: black;
     transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .header-contact-menu-tel {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
     line-height: 40px;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    color: var(--color-logo1);
+    color: black;
     transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-soc-list {
+    margin-top: 40px;
     display: flex;
-    justify-content: space-between;
+    gap: 21px;
+    justify-content: left;
 }
 
 .menu-soc-item {
     width: 40px;
     height: 40px;
+
 }
 
 .menu-soc-link {
@@ -678,12 +666,13 @@ font-family: 'Open Sans', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-logo1);
+    border: 1px solid orangered;
+    background-color: transparent;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-soc-icon {
-    fill: #FFFFFF;
+    fill: black;
 }
 
 .menu-soc-link:hover {
