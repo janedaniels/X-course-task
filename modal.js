@@ -18,7 +18,7 @@ const dataBooks = JSON.parse(request.responseText);
 // const level = dataBooks.books[0].level;
 
 const bookArray = dataBooks.books;
-console.log(bookArray);
+
 
 // function createMarkap(element) {
 //   return element.innerHTML = `<li>
@@ -33,12 +33,35 @@ console.log(bookArray);
 
 function createElementList(arr, element) {
 const markup = arr.map(({ image, id, title, author, price }) => `<li>
-  <img src="${image}" alt="books image" width="200"/>
+  <img src="${image}" alt="books image" width="250"/>
 <h2 id="${id}">${title}</h2>
 <h3>${author}</h3>
-<h4><p>Price ${price}</p></h4>
+<h4><p>${price} $</p></h4>
 <button>View</button>
 </li>`).join('');
   element.insertAdjacentHTML('beforeend', markup);
 }
 createElementList(bookArray, bookList)
+// ===========================================класи================================================
+bookList.classList.add('catalog-books-list');
+// ==== знаходимо колекцію всіх дітей списку
+let bookItemsCollection = bookList.children;
+console.log(bookItemsCollection);
+// перевизначаємо отриману колекцію у масив
+bookItemsCollection = Array.prototype.slice.call(bookItemsCollection);
+console.log(bookItemsCollection);
+// перебираємо масив дітей і кожному присвоюємо клас + клас дітям дітей
+bookItemsCollection.forEach(bookItem => {
+  bookItem.classList.add('catalog-book-item', 'list');
+  bookItem.children[0].classList.add('catalog-book-img');
+  bookItem.children[1].classList.add('catalog-book-title');
+  bookItem.children[2].classList.add('catalog-book-author');
+  bookItem.children[3].classList.add('catalog-book-price');
+  bookItem.children[4].classList.add('catalog-button-view');
+});
+
+  console.log(bookItemsCollection);
+
+
+
+
