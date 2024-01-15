@@ -1,3 +1,39 @@
+// ========= ІНПУТ ПОШУКУ===================
+
+
+window.onload = () => {
+  initialUIsetup();
+}
+
+const initialUIsetup = () => {
+  document.getElementById("search").addEventListener("mouseover", () => addClassListWithTimeout("searchLabel", "hovered", 500));
+  document.getElementById("search").addEventListener("mouseout", () => removeClassListWithTimeout("searchLabel", "hovered", 500));
+}
+
+const addClassListWithTimeout = (id, className, timeout) => {
+  setTimeout(() => {
+    document.getElementById(id).classList.add(className)
+  }, timeout)
+}
+const removeClassListWithTimeout = (id, className, timeout) => {
+  setTimeout(() => {
+    document.getElementById(id).classList.remove(className)
+  }, timeout)
+}
+const addClassListWithOutTimeout = (id, className) => {
+    document.getElementById(id).classList.add(className)
+}
+const removeClassListWithOutTimeout = (id, className) => {
+    document.getElementById(id).classList.remove(className)
+  }
+
+ 
+
+
+
+
+
+
 // визначаємо контейнер для каталогу книг
 const bookList = document.querySelector(".book-list-js");
 // формуємо запит на отримання даних з локального json файлу 
