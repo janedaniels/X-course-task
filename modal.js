@@ -1,14 +1,11 @@
 // ========= ІНПУТ ПОШУКУ===================
 
 
-window.onload = () => {
-  initialUIsetup();
-}
+// window.onload = () => {
 
-const initialUIsetup = () => {
-  document.getElementById("search").addEventListener("mouseover", () => addClassListWithTimeout("searchLabel", "hovered", 500));
-  document.getElementById("search").addEventListener("mouseout", () => removeClassListWithTimeout("searchLabel", "hovered", 500));
-}
+// }
+
+
 
 const addClassListWithTimeout = (id, className, timeout) => {
   setTimeout(() => {
@@ -27,7 +24,7 @@ const removeClassListWithOutTimeout = (id, className) => {
     document.getElementById(id).classList.remove(className)
   }
 
- 
+
 
 
 
@@ -36,6 +33,8 @@ const removeClassListWithOutTimeout = (id, className) => {
 
 // визначаємо контейнер для каталогу книг
 const bookList = document.querySelector(".book-list-js");
+bookList.classList.add('catalog-books-list');
+bookList.classList.add('list');
 // формуємо запит на отримання даних з локального json файлу 
 const requestURL = "./books.json";
 const request = new XMLHttpRequest();
@@ -47,38 +46,71 @@ const dataBooks = JSON.parse(request.responseText);
     else { console.error(request.statusText) };
 // виймаємо масив об'єктів з отриманого об'екту 
 const bookArray = dataBooks.books;
+console.log(bookArray);
 // функція для отримання розмітки каталогу, передаємо масив і елемент що треба наповнити
-function createElementList(arr, element) {
-const markup = arr.map(({ image, id, title, author, price }) => `<li>
-  <img src="${image}" alt="books image" width="250"/>
-<h2 id="${id}">${title}</h2>
-<h3>${author}</h3>
-<h4><p>${price} $</p></h4>
-<button>View</button>
+function createElementList(arr) {
+  return arr.map(({ image, id, title, author, price }) => `<li class="catalog-book-item">
+  <img src="${image}" alt="books image" width="250" class="catalog-book-img"/>
+<h2 id="${id}" class="catalog-book-title">${title}</h2>
+<h3 class="catalog-book-author">${author}</h3>
+<h4 class="catalog-book-price"><p>${price} $</p></h4>
+<button class="catalog-button-view">View</button>
 </li>`).join('');
-// вставляємо в документ
-  element.insertAdjacentHTML('beforeend', markup);
 }
+// вставляємо в документ
+bookList.insertAdjacentHTML('beforeend', createElementList(bookArray));
+
 createElementList(bookArray, bookList)
 // ===========================================класи================================================
-bookList.classList.add('catalog-books-list');
+
 // ==== знаходимо колекцію всіх дітей списку
 let bookItemsCollection = bookList.children;
-console.log(bookItemsCollection);
+
 // перевизначаємо отриману колекцію у масив
 bookItemsCollection = Array.prototype.slice.call(bookItemsCollection);
-console.log(bookItemsCollection);
-// перебираємо масив дітей і кожному присвоюємо клас + клас дітям дітей
-bookItemsCollection.forEach(bookItem => {
-  bookItem.classList.add('catalog-book-item', 'list');
-  bookItem.children[0].classList.add('catalog-book-img');
-  bookItem.children[1].classList.add('catalog-book-title');
-  bookItem.children[2].classList.add('catalog-book-author');
-  bookItem.children[3].classList.add('catalog-book-price');
-  bookItem.children[4].classList.add('catalog-button-view');
-});
 
-  console.log(bookItemsCollection);
+// перебираємо масив дітей і кожному присвоюємо клас + клас дітям дітей
+// bookItemsCollection.forEach(bookItem => {
+//   bookItem.classList.add('catalog-book-item', 'list');
+//   bookItem.children[0].classList.add('catalog-book-img');
+//   bookItem.children[1].classList.add('catalog-book-title');
+//   bookItem.children[2].classList.add('catalog-book-author');
+//   bookItem.children[3].classList.add('catalog-book-price');
+//   bookItem.children[4].classList.add('catalog-button-view');
+// });
+
+
+// ===========================ПОШУК ТА ФІЛЬТР==================================
+// ==== ІНПУТ====
+let inputSearch = document.getElementById('search');
+inputSearch.addEventListener("input", onSearch)
+function onSearch(evt) {
+  evt.preventDefault();
+  const inputSearch = evt.currentTarget.value;
+  let searchArray = [];
+  for (let i = 0; i < bookArray.length; i++) {
+    if (bookArray[i].title.trim().toLowerCase().includes(inputSearch.trim().toLowerCase())) {
+      searchArray.push(bookArray[i])};
+  }
+  bookList.innerHTML = createElementList(searchArray);
+  bookList.classList.add('catalog-books-list');
+};
+
+  
+// ====СЕЛЕКТ=====
+// const priceSelect = document.getElementById('select');
+// priceSelect.addEventListener("change", onSelect)
+// // ========== фільтр по ціні======================
+// function onSelect(evt) {
+//   evt.preventDefault();
+//   const priceSelect = evt.currentTarget.value;
+//   console.log(priceSelect);
+// }
+
+
+
+
+
 
 
 

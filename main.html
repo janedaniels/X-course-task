@@ -87,13 +87,20 @@
 </div>
 </header>
 <main>
-    <section class="searhAndSort">
+    <section>
+    <div class="searhAndSelect">
     <div id="search-book">
-      <label for="search" id="searchLabel">Search</label>
-      <input type="text" placeholder="" id="search">
-    <svg id="searchIcon" width="16" height="16">
-        <use href="/images/sprite.svg#icon-search"></use>
-    </svg>
+      <input type="text" placeholder="book's name" id="search">
+        <svg id="searchIcon" width="16" height="16">
+            <use href="/images/sprite.svg#icon-search"></use>
+        </svg>
+    </div>
+    <select id="select">
+        <option value="price">All prices</option>
+        <option value="price">0-15$</option>
+        <option value="price">15-30$</option>
+        <option value="price">more 30$</option>
+    </select>
     </div>
     </section>
     <section class="book-catalog">
