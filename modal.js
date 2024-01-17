@@ -64,10 +64,10 @@ createElementList(bookArray, bookList)
 // ===========================================класи================================================
 
 // ==== знаходимо колекцію всіх дітей списку
-let bookItemsCollection = bookList.children;
+// let bookItemsCollection = bookList.children;
 
-// перевизначаємо отриману колекцію у масив
-bookItemsCollection = Array.prototype.slice.call(bookItemsCollection);
+// // перевизначаємо отриману колекцію у масив
+// bookItemsCollection = Array.prototype.slice.call(bookItemsCollection);
 
 // перебираємо масив дітей і кожному присвоюємо клас + клас дітям дітей
 // bookItemsCollection.forEach(bookItem => {
