@@ -46,7 +46,6 @@ const dataBooks = JSON.parse(request.responseText);
     else { console.error(request.statusText) };
 // виймаємо масив об'єктів з отриманого об'екту 
 const bookArray = dataBooks.books;
-console.log(bookArray);
 // функція для отримання розмітки каталогу, передаємо масив і елемент що треба наповнити
 function createElementList(arr) {
   return arr.map(({ image, id, title, author, price }) => `<li class="catalog-book-item">
@@ -117,7 +116,6 @@ let priceSelect = evt.currentTarget.value;
   else { selectArray = bookArray };
  bookList.innerHTML = createElementList(selectArray);
   bookList.classList.add('catalog-books-list');
-  console.log(selectArray.length);
 }
 
 
