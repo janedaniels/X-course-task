@@ -83,7 +83,8 @@ createElementList(bookArray, bookList)
 // ===========================ПОШУК ТА ФІЛЬТР==================================
 // ==== ІНПУТ====
 let inputSearch = document.getElementById('search');
-inputSearch.addEventListener("input", onSearch)
+inputSearch.addEventListener("input", onSearch);
+
 function onSearch(evt) {
   evt.preventDefault();
   const inputSearch = evt.currentTarget.value;
@@ -98,14 +99,27 @@ function onSearch(evt) {
 
   
 // ====СЕЛЕКТ=====
-// const priceSelect = document.getElementById('select');
-// priceSelect.addEventListener("change", onSelect)
+const priceTo15 = bookArray.filter(item => item.price < 15.00);
+const price15To30 = bookArray.filter(item => item.price >= 15.00 && item.price <= 30.00);
+const priceMore30 = bookArray.filter(item => item.price > 30.00);
+
+
+const priceSelect = document.getElementById('select');
+priceSelect.addEventListener("change", onSelect);
+let selectArray = [];
 // // ========== фільтр по ціні======================
-// function onSelect(evt) {
-//   evt.preventDefault();
-//   const priceSelect = evt.currentTarget.value;
-//   console.log(priceSelect);
-// }
+function onSelect(evt) {
+  evt.preventDefault();
+let priceSelect = evt.currentTarget.value;
+  if (priceSelect === "priceMore30") { selectArray = priceMore30; }
+  else if (priceSelect === "price15To30") { selectArray = price15To30; }
+  else if (priceSelect === "priceTo15") { selectArray = priceTo15; }
+  else { selectArray = bookArray };
+ bookList.innerHTML = createElementList(selectArray);
+  bookList.classList.add('catalog-books-list');
+  console.log(selectArray.length);
+}
+
 
 
 
