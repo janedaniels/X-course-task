@@ -46,7 +46,18 @@ const dataBooks = JSON.parse(request.responseText);
     else { console.error(request.statusText) };
 // виймаємо масив об'єктів з отриманого об'екту 
 const bookArray = dataBooks.books;
+const imgAlt = "./images/picture_not_found.png";
 // функція для отримання розмітки каталогу, передаємо масив і елемент що треба наповнити
+function changeImg(arr) {
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i].image === "") {
+      arr[i].image = imgAlt;
+    }
+  }
+ return arr;
+}
+changeImg(bookArray)
+
 function createElementList(arr) {
   return arr.map(({ image, id, title, author, price }) => `<li class="catalog-book-item">
   <img src="${image}" alt="books image" width="250" class="catalog-book-img"/>
@@ -60,6 +71,10 @@ function createElementList(arr) {
 bookList.insertAdjacentHTML('beforeend', createElementList(bookArray));
 
 createElementList(bookArray, bookList)
+
+
+
+
 // ===========================================класи================================================
 
 // ==== знаходимо колекцію всіх дітей списку
