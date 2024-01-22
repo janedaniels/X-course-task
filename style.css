@@ -47,6 +47,7 @@ margin-right: auto;
 .section {
     padding-top: 20px}
 /* =====================================HEADER======================================= */
+
 .header-section-sing-in {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -219,16 +220,16 @@ position: fixed;
 
 .head-text {
     font-family: 'Open Sans', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
-    color: black;
+    color: #292929;
     margin-bottom: 10px;
 }
 .main-text {
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
-    color: black;
+    color: #292929;
 }
 
 .user-blok {
@@ -256,7 +257,7 @@ position: fixed;
 .part {
     border: 1px solid orangered;
     border-radius: 7px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid orangered;
     margin-bottom: 10px;
 }
@@ -282,13 +283,16 @@ position: fixed;
     margin: 0 auto;
 }
 /* ===================Book Properties============================ */
-.book-properties-list {
-    padding-left: 15px;
-}
+
 .book-property:not(:last-child) {
     margin-bottom: 10px;
 }
-
+.book-property-short-desc {
+font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    color: #292929;
+}
 /* =================== Order Field================================ */
 .book-option {
     display: flex;
@@ -320,7 +324,9 @@ position: fixed;
 }
 
 .counter-svg {
-    fill: grey;
+    fill: gray;
+    padding: 5px;
+    border-radius: 50%;
 }
 .btn-part {
     margin-top: 30px;
@@ -335,7 +341,7 @@ position: fixed;
         padding-right: 19px;
         border: 1px solid orangered;
         background-color: transparent;
-        border-radius: 25px;
+        border-radius: 8px;
         font-family: 'Open Sans', sans-serif;
         font-size: 16px;
         font-weight: 500;
@@ -345,10 +351,10 @@ position: fixed;
         cursor: pointer;
     }
 /* ======================Book Description================= */
-.text-description {
-    text-align: justify;
+/* .text-description {
+    text-align: justify; 
     text-indent: 20px;
-}
+} */
 
 /* =============================================FOOTER================================================ */
 
@@ -391,7 +397,7 @@ margin-bottom: 20px;
 }
 
 .contact-icon {
-    fill: #000000;
+    fill: #292929;
 }
 .follow-soc {
     margin-bottom: 20px;
@@ -411,7 +417,7 @@ margin-bottom: 20px;
     border: 1px solid #404040;
 }
 .soc-icon {
-    fill: black;
+    fill: #292929;
 }
 .soc-icon-link:hover {
     border: 1px solid #ee440b;
@@ -446,7 +452,7 @@ margin-bottom: 20px;
     height: 40px;
     border-radius: 4px;
     border: 1px solid #555555;
-    color: black;
+    color: #292929;
     padding-left: 42px;
     box-sizing: border-box;
 }
@@ -455,13 +461,13 @@ margin-bottom: 20px;
     display: block;
 font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    color: black;
+    color: #292929;
 }
 .modal-form-chek-desc {
     display: block;
         font-family: 'Open Sans', sans-serif;
         font-size: 16px;
-        color: black;
+        color: #292929;
 }
 
 .modal-form-input-wrapper {
@@ -518,14 +524,14 @@ font-family: 'Open Sans', sans-serif;
     padding-left: 10px;
     padding-right: 10px;
     border: 1px solid orangered;
-    border-radius: 25px;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: 0.09em;
     text-transform: uppercase;
     background-color: white;
-    color: black;
+    color: #292929;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -631,7 +637,7 @@ font-family: 'Open Sans', sans-serif;
 
 .header-contact-menu-mail {
     font-family: 'Open Sans', sans-serif;
-    color: black;
+    color: #292929;
     transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -642,7 +648,7 @@ font-family: 'Open Sans', sans-serif;
     line-height: 40px;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    color: black;
+    color: #292929;
     transition: color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -672,7 +678,7 @@ font-family: 'Open Sans', sans-serif;
 }
 
 .menu-soc-icon {
-    fill: black;
+    fill: #292929;
 }
 
 .menu-soc-link:hover {

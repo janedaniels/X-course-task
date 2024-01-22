@@ -133,6 +133,69 @@ let priceSelect = evt.currentTarget.value;
   bookList.classList.add('catalog-books-list');
 }
 
+// =====================Клік на КНОПКУ ***VIEW****=======================
+let totalPrice = 0;
+const viewBtnClikArr = Array.from(document.querySelectorAll(".catalog-button-view"));
+viewBtnClikArr.forEach((btn) => btn.addEventListener("click", btnOnClick)); 
+
+function createOwnBooksPage (arr) {
+return arr.map(({ image, title, author, level, tags, price, shortDescription, description }) => `<div class="book-desc-while">
+            <div class="part book-img-blok"><img src="${image}" class="book-img"></div>
+                <div class="book-direction part">
+                    <h2 class="head-text">${title}</h2>
+                    <ul class="book-properties-list list">
+                    <li class="book-property main-text">${author}</li>
+                    <li class="book-property main-text">${level}</li>
+                    <li class="book-property main-text">${tags}</li>
+                    <li class="book-property-short-desc">${shortDescription}</li>
+                    </ul>
+                </div>
+        <div class="part">
+            <ul class="book-option-list list">
+            <li class="book-option">
+                <span class="book-option-name main-text">Price</span>
+                <span class="book-option-value main-text">${price} $</span>
+            </li>
+            <li class="book-option">
+                <span class="book-option-name main-text">Count</span>
+                <div class="counter-blok">
+                    <svg class="counter-svg" width="26px" height="26px"><use href="./images/sprite.svg#icon-minus"></use></svg>
+                    <label for="counter">
+                        <input type="number" id="counter" class="counter-input">
+                    </label><svg class="counter-svg" width="26px" height="26px"><use href="./images/sprite.svg#icon-plus"></use></svg>
+                </div>
+            </li>
+            <li class="book-option">
+                <span class="book-option-name main-text">Total price</span>
+                <span class="book-option-name main-text">${totalPrice} $</span>
+            </li>
+        </ul>
+        <div class="btn-part">
+            <button type="button" class="option-btn-add">Add to card</button>
+            </div>
+        </div>
+        </div></div>
+    <div class="section">
+        <div>
+        <h2 class="head-text">Description</h2>
+        <p class="main-text">${description}</p>
+        </div>
+    </div>`).join('');
+  }
+function btnOnClick(evt) {
+  evt.preventDefault();
+  let objArr = [];
+  for (let i = 0; i < viewBtnClikArr.length; i += 1) {
+    if (evt.target === viewBtnClikArr[i]) {
+      objArr.push(bookArray[i]);
+      console.log(objArr);
+  bookList.innerHTML = createOwnBooksPage(objArr)
+}
+}
+}
+
+
+
 
 
 

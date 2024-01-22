@@ -154,9 +154,3 @@ section #search-book input:hover {
     .catalog-book-item {
             flex-basis: calc((100% - 80px) / 3);}
         }
-/* .book-title {
-font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    text-align: justify;
-    color: black;
-} */
